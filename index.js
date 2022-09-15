@@ -28,7 +28,7 @@ connect(process.env.MONGO_URL, {
 
 const io = new Server(server,{
     cors: {
-        origin: "http://localhost:3000",
+        origin: process.env.ORIGIN_URL,
         credentials: true,
     },
 });
